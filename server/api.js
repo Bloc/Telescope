@@ -1,7 +1,7 @@
 serveAPI = function(limitSegment){
   var posts = [];
   var limit = 100; // default limit: 100 posts
-  
+
   if(typeof limitSegment !== 'undefined')
     limit = limitSegment;
 
@@ -27,5 +27,5 @@ serveAPI = function(limitSegment){
     posts.push(properties);
   });
 
-  return JSON.stringify(posts); 
+  return JSON.stringify(posts);
 };

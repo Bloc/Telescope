@@ -4,8 +4,9 @@
     "momentjs": {},
     "crypto-base": {},
     "crypto-md5": {},
-    "iron-router": {},
+    "iron-router": { "version": "0.7.1" },
     "fast-render": {},
+    "http-methods": {},
     "spin": {},
     "autoform": {},
     "iron-router-progress": {}
