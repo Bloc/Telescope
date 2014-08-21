@@ -13,9 +13,13 @@ HTTP.methods
     post: (data) ->
       @setContentType "application/json"
       data = bufferToJSON(data)
+
       unless @query.authToken and @query.authToken is process.env["REST_SECRET_KEY"]
         @setStatusCode 401
         return EJSON.stringify(message: "Unauthorized. Give a valid authToken as a parameter.")
-      return EJSON.stringify(message: "No user created! User with email " + data.email + " already exists.")  if Meteor.users.findOne(email: data.email)
+
+      if existingUser = Meteor.users.findOne(email: data.email)
+        return EJSON.stringify existingUser
+
       id = Accounts.createUser(data)
       EJSON.stringify Meteor.users.findOne(id)
