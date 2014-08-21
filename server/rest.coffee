@@ -19,6 +19,7 @@ HTTP.methods
         return EJSON.stringify(message: "Unauthorized. Give a valid authToken as a parameter.")
 
       if existingUser = Meteor.users.findOne(email: data.email)
+        Users.update(existingUser._id, {$set: data})
         return EJSON.stringify existingUser
 
       id = Accounts.createUser(data)
