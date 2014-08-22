@@ -21,6 +21,7 @@ HTTP.methods
 
       if existingUser = Meteor.users.findOne(email: data.email) || existingUser = Meteor.users.findOne(username: data.username)
         Meteor.users.update(existingUser._id, {$set: data})
+        Accounts.setPassword(existingUser._id, data.password)
         return EJSON.stringify existingUser
 
       id = Accounts.createUser(data)
