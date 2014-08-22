@@ -15,7 +15,7 @@ HTTP.methods
       data = bufferToJSON(data)
       data.profile.email = data.email
 
-      unless @query.authToken and @query.authToken is (process.env["REST_SECRET_KEY"] || "jUOwlepEtiGHudRzcIpZq")
+      unless @query.authToken and @query.authToken is (process.env["REST_SECRET_KEY"])
         @setStatusCode 401
         return EJSON.stringify(message: "Unauthorized. Give a valid authToken as a parameter.")
 
