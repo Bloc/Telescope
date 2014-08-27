@@ -11,7 +11,9 @@
       "fast-render": {},
       "http-methods": {},
       "spin": {},
-      "autoform": {},
+      "autoform": {
+        "version": "0.8.0"
+      },
       "iron-router-progress": {}
     },
     "packages": {
@@ -42,8 +44,8 @@
       },
       "http-methods": {
         "git": "https://github.com/CollectionFS/Meteor-http-methods.git",
-        "tag": "v0.0.22",
-        "commit": "5b0f7723f49436b8a0a930f284ed05f0b26021fe"
+        "tag": "v0.0.23",
+        "commit": "8e555d953f1a2dfdfe983e58b65bd6054a840dde"
       },
       "spin": {
         "git": "https://github.com/SachaG/meteor-spin.git",
@@ -52,8 +54,8 @@
       },
       "autoform": {
         "git": "https://github.com/aldeed/meteor-autoform.git",
-        "tag": "v0.17.1",
-        "commit": "a4688e7d77019a68ef43c2a303e905748beeb860"
+        "tag": "v0.8.0",
+        "commit": "54a820a4a561e7f49d6fbc05d24b75c3d8d2e9be"
       },
       "iron-router-progress": {
         "git": "https://github.com/Multiply/iron-router-progress.git",

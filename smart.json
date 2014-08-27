@@ -8,7 +8,7 @@
     "fast-render": {},
     "http-methods": {},
     "spin": {},
-    "autoform": {},
+    "autoform": { "version": "0.8.0"},
     "iron-router-progress": {}
   }
 }
