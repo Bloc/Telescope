@@ -57,6 +57,9 @@
 
     {{#if canView}}
     <ul class="nav user-nav desktop">
+      {{ #if currentUser }}
+        <li><h3> Hello, {{ currentUser.profile.name }} </h3></li>
+      {{ /if }}
       <li><a id="submit" class="submit button" href="/submit">{{i18n "Post"}}</a></li>
     </ul>
     {{/if}}
