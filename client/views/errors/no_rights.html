@@ -1,5 +1,14 @@
 <template name="no_rights">
-  <div class="grid-small grid-block dialog">
-    {{i18n "Sorry, you don't have the rights to view this page."}}
-  </div>
+  {{#if currentUser}}
+    <div class="grid-small grid-block dialog">
+      {{i18n "Sorry, you don't have the rights to view this page."}}
+    </div>
+  {{else}}
+    <div class="grid-small grid-block dialog">
+      <p>
+        You must sign in to access this site.
+        <a class='button inline' href='https://www.bloc.io/community'>Sign In</a>
+      </p>
+    </div>
+  {{/if}}
 </template>
